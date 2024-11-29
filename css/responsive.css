@@ -1,0 +1,78 @@
+/* 更新移动端导航菜单样式 */
+.nav-toggle {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav-toggle i {
+    transition: all 0.3s ease;
+}
+
+.nav-toggle.active i.fa-bars {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 1rem;
+        border-radius: 0;
+    }
+
+    .nav-menu li a::before {
+        display: none;
+    }
+
+    .nav-menu li a:hover {
+        background: linear-gradient(45deg, #2196F3, #00ff87);
+        color: white;
+    }
+}
+
+/* 响应式布局调整 */
+@media screen and (max-width: 480px) {
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+} 

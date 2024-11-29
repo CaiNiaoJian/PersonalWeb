@@ -1,0 +1,26 @@
+personal-website/
+├── index.html
+├── css/
+│   ├── style.css
+│   ├── responsive.css
+│   └── animations.css
+├── js/
+│   ├── main.js
+│   ├── animations.js
+│   └── modules/
+│       ├── blog.js
+│       ├── books.js
+│       ├── gallery.js
+│       ├── ai-chat.js
+│       └── projects.js
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── fonts/
+└── pages/
+    ├── blog.html
+    ├── knowledge.html
+    ├── books.html
+    ├── projects.html
+    ├── ai-chat.html
+    └── gallery.html 

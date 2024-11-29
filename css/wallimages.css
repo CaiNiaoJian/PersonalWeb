@@ -1,0 +1,194 @@
+/* 图片墙容器 */
+.photo-gallery-section {
+    padding: 60px 0;
+    background: linear-gradient(to bottom, #f8f9fa, #fff);
+    overflow: hidden;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* 轮播容器 */
+.carousel-container {
+    position: relative;
+    height: 500px;
+    margin: 40px auto;
+}
+
+/* 轮播轨道 */
+.carousel-track {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* 轮播图片 */
+.carousel-slide {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.75s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.75s ease;
+}
+
+/* 轮播状态类 */
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-slide.prev {
+    opacity: 0.7;
+    transform: translateX(-100%);
+    z-index: 1;
+    filter: blur(3px);
+}
+
+.carousel-slide.next {
+    opacity: 0.7;
+    transform: translateX(0%);
+    z-index: 1;
+    filter: blur(3px);
+}
+
+/* 控制按钮 */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: white;
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.3);
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    right: 20px;
+}
+
+/* 指示点 */
+.carousel-dots {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(33, 150, 243, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 400px;
+    }
+
+    .carousel-slide {
+        width: 80%;
+    }
+
+    .carousel-button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* 添加加载状态样式 */
+.carousel-slide::before {
+    content: '加载中...';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #666;
+    font-size: 1.2em;
+    z-index: 1;
+}
+
+.carousel-slide.loaded::before {
+    display: none;
+}
+
+.carousel-slide img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-slide.loaded img {
+    opacity: 1;
+}
+
+/* 添加加载指示器样式 */
+.loading-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(33, 150, 243, 0.1);
+    border-left-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+.loading-text {
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+} 

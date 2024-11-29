@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaiNiaoJian的个人网站</title>
+    <!-- 使用国内CDN -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/authorinfo.css">
+    <link rel="stylesheet" href="./css/wallimages.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="./index.html">CaiNiaoJian</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./pages/blog.html">博客</a></li>
+            <li><a href="./pages/knowledge.html">知识分享</a></li>
+            <li><a href="./pages/books.html">电子书库</a></li>
+            <li><a href="./pages/projects.html">开源项目</a></li>
+            <li><a href="./pages/ai-chat.html">AI Chat</a></li>
+            <li><a href="./pages/gallery.html">图片墙</a></li>
+        </ul>
+    </nav>
+
+    <!-- 首页hero区域 -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">CaiNiaoJian的个人空间</h1>
+            <p class="hero-subtitle">探索技术，分享创意，连接世界</p>
+        </div>
+    </header>
+
+    <!-- 在 hero 区域后面，features-section 前面添加 -->
+    <section class="author-section">
+        <div class="author-container">
+            <div class="author-card">
+                <div class="author-preview">
+                    <i class="fas fa-user-circle preview-icon"></i>
+                    <span class="preview-text">作者介绍CaiNiaoJian</span>
+                </div>
+                <div class="author-details">
+                    <div class="author-avatar">
+                        <img src="./assets/images/hero.jpg" alt="CaiNiaoJian">
+                    </div>
+                    <div class="author-info">
+                        <h2 class="author-name">健康CaiNiaoJian</h2>
+                        <div class="author-details-list">
+                            <div class="author-detail-item">
+                                <i class="fas fa-flag"></i>
+                                <span>国籍：中国</span>
+                            </div>
+                            <div class="author-detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>邮箱：gaojian1573@foxmail.com</span>
+                            </div>
+                            <div class="author-detail-item">
+                                <i class="fas fa-envelope-open"></i>
+                                <span>备用邮箱：jke024146@gmail.com</span>
+                            </div>
+                            <div class="author-detail-item">
+                                <i class="fas fa-university"></i>
+                                <span>学校：中国矿业大学</span>
+                            </div>
+                            <div class="author-detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>地址：山西大同 / 江苏徐州</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增的功能介绍区域 -->
+    <section class="features-section">
+        <div class="feature-container">
+            <h2 class="section-title">网站功能</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>知识分享</h3>
+                        <p>在这里，你可以找到丰富的技术文章、学习资源和实战经验。从前端到后端，从基础到进阶，让我们一起在技术的海洋中探索。</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>AI 助手</h3>
+                        <p>智能AI助手随时待命，为你解答技术难题，提供学习建议，让学习和开发变得更加轻松有趣。</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>开源项目</h3>
+                        <p>探索精心打造的开源项目，从实践中学习，让我们一起为开源社区贡献力量。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <section class="section blog-section">
+            <div class="section-content">
+                <h2>最新博客</h2>
+                <div class="blog-cards">
+                    <div class="card">
+                        <h3>Web开发最佳实践</h3>
+                        <p class="date">2024-03-20</p>
+                        <p class="preview">探讨现代Web开发中的关键技术和方法论，包括性能优化、安全性考虑等重要话题...</p>
+                        <a href="#" class="read-more">阅读更多</a>
+                    </div>
+                    <div class="card">
+                        <h3>AI技术发展趋势</h3>
+                        <p class="date">2024-03-18</p>
+                        <p class="preview">深入分析人工智能领域的最新发展，探讨机器学习、深度学习的应用前景...</p>
+                        <a href="#" class="read-more">阅读更多</a>
+                    </div>
+                    <div class="card">
+                        <h3>前端框架对比</h3>
+                        <p class="date">2024-03-15</p>
+                        <p class="preview">详细比较React、Vue、Angular等主流前端框架的优势与适用场景...</p>
+                        <a href="#" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section knowledge-section">
+            <div class="section-content">
+                <h2>热门分享</h2>
+                <div class="knowledge-cards">
+                    <div class="card">
+                        <h3>JavaScript进阶指南</h3>
+                        <p class="category">编程语言</p>
+                        <p class="preview">深入理解JavaScript的高级特性，包括闭包、原型链、异步编程等核心概念...</p>
+                        <a href="#" class="read-more">查看详情</a>
+                    </div>
+                    <div class="card">
+                        <h3>Docker容器化实践</h3>
+                        <p class="category">DevOps</p>
+                        <p class="preview">从入门到精通，掌握Docker容器化技术，实现高效的应用部署和管理...</p>
+                        <a href="#" class="read-more">查看详情</a>
+                    </div>
+                    <div class="card">
+                        <h3>数据结构精讲</h3>
+                        <p class="category">计算机基础</p>
+                        <p class="preview">图解常用数据结构，通过实例深入理解其原理和应用场景...</p>
+                        <a href="#" class="read-more">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 在第177行后添加 -->
+<section class="photo-gallery-section">
+    <div class="gallery-container">
+        <h2 class="section-title">图片墙</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="http://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302" 
+                         alt="摄影作品1"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600?text=Image+1'"
+                         loading="lazy">
+                </div>
+                <div class="carousel-slide">
+                    <img src="http://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302" 
+                         alt="摄影作品2"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600?text=Image+2'"
+                         loading="lazy">
+                </div>
+                <div class="carousel-slide">
+                    <img src="http://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302" 
+                         alt="摄影作品3"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600?text=Image+3'"
+                         loading="lazy">
+                </div>
+                <div class="carousel-slide">
+                    <img src="http://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302" 
+                         alt="摄影作品4"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600?text=Image+4'"
+                         loading="lazy">
+                </div>
+                <div class="carousel-slide">
+                    <img src="http://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302" 
+                         alt="摄影作品5"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600?text=Image+5'"
+                         loading="lazy">
+                </div>
+            </div>
+            <button class="carousel-button prev-button" aria-label="上一张">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-button next-button" aria-label="下一张">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我</h3>
+                <p>热爱技术，分享生活</p>
+                <p>中国矿业大学在读</p>
+                <p>专注于Web开发与人工智能</p>
+            </div>
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> gaojian1573@foxmail.com</p>
+                    <p><i class="fas fa-envelope-open"></i> jke024146@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 山西大同 / 江苏徐州</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" title="微信" id="wechatIcon">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                    <a href="#" title="QQ">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="./pages/blog.html">博客文章</a></li>
+                    <li><a href="./pages/projects.html">开源项目</a></li>
+                    <li><a href="./pages/gallery.html">图片墙</a></li>
+                    <li><a href="./pages/ai-chat.html">AI助手</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CaiNiaoJian. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/animations.js" type="module"></script>
+    <script src="./js/authorinfo.js" type="module"></script>
+    <script src="./js/wallimages.js" type="module"></script>
+    <script src="./js/modules/preload.js" type="module"></script>
+</body>
+</html> 

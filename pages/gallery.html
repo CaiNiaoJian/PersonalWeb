@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片墙 - CaiNiaoJian的个人网站</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <style>
+        .gallery-container {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 20px;
+        }
+        
+        .gallery-grid {
+            column-count: 4;
+            column-gap: 20px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 1200px) {
+            .gallery-grid {
+                column-count: 3;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                column-count: 2;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                column-count: 1;
+            }
+        }
+        
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        /* 图片查看器样式 */
+        .image-viewer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            padding: 40px;
+        }
+        
+        .image-viewer.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-viewer img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
+        }
+        
+        .image-viewer .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/">CaiNiaoJian</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="/">首页</a></li>
+            <li><a href="/pages/blog.html">博客</a></li>
+            <li><a href="/pages/knowledge.html">知识分享</a></li>
+            <li><a href="/pages/books.html">电子书库</a></li>
+            <li><a href="/pages/projects.html">开源项目</a></li>
+            <li><a href="/pages/ai-chat.html">AI Chat</a></li>
+            <li><a href="/pages/gallery.html">图片墙</a></li>
+        </ul>
+    </nav>
+
+    <main class="gallery-container">
+        <h2>图片墙</h2>
+        <div class="gallery-grid">
+            <!-- 图片将通过JavaScript动态加载 -->
+        </div>
+    </main>
+
+    <!-- 图片查看器 -->
+    <div class="image-viewer">
+        <i class="fas fa-times close-button"></i>
+        <img src="" alt="">
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我</h3>
+                <p>热爱技术，分享生活</p>
+            </div>
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CaiNiaoJian. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/animations.js" type="module"></script>
+</body>
+</html> 

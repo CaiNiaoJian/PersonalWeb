@@ -1,0 +1,9 @@
+assets/
+└── images/
+    ├── hero-bg.jpg          # 首页背景图片 (建议尺寸: 1920x1080px)
+    ├── books/               # 电子书封面图片目录
+    │   ├── js.jpg          # JavaScript书籍封面 (建议尺寸: 400x600px)
+    │   └── python.jpg      # Python书籍封面 (建议尺寸: 400x600px)
+    └── gallery/            # 图片墙图片目录
+        ├── image1.jpg      # 风景照片 (建议尺寸: 800x600px或更大)
+        └── image2.jpg      # 城市照片 (建议尺寸: 800x600px或更大) 
